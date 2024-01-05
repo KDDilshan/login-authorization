@@ -1,9 +1,11 @@
-import express, { json } from 'express'
+import express from 'express'
+import {userRouter} from './routes/routes.js';
+
 const app=express()
 const port=5000
 
 app.use(express.json())
-app.use('/v1',getmethods)
+app.use('/v2',userRouter)
 
 
 app.listen(port,()=>{

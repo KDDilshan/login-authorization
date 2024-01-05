@@ -20,7 +20,7 @@ export default function Form() {
     event.preventDefault();
     
     try {
-      const response = await fetch('your_backend_url', {
+      const response = await fetch('http://localhost:5000/v2/api/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ export default function Form() {
         // Optionally, you can handle the error response from the backend
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.log('Error submitting form:', error);
       // Handle other potential errors, such as network issues
     }
 
